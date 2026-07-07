@@ -1,0 +1,16 @@
+com/prakhyath/backendmastery/wallet/wallet/WalletEventPublisher.class
+com/prakhyath/backendmastery/wallet/wallet/WalletTransactionResponse.class
+com/prakhyath/backendmastery/wallet/wallet/WalletTransactionRepository.class
+com/prakhyath/backendmastery/wallet/wallet/WalletResponse.class
+com/prakhyath/backendmastery/wallet/wallet/WalletService.class
+com/prakhyath/backendmastery/wallet/wallet/ApiExceptionHandler.class
+com/prakhyath/backendmastery/wallet/WalletServiceApplication.class
+com/prakhyath/backendmastery/wallet/wallet/MoneyRequest.class
+com/prakhyath/backendmastery/wallet/wallet/CreateWalletRequest.class
+com/prakhyath/backendmastery/wallet/wallet/TransactionType.class
+com/prakhyath/backendmastery/wallet/wallet/Wallet.class
+com/prakhyath/backendmastery/wallet/wallet/WalletController.class
+com/prakhyath/backendmastery/wallet/wallet/WalletTransaction.class
+com/prakhyath/backendmastery/wallet/wallet/WalletTransactionCommittedEvent.class
+com/prakhyath/backendmastery/wallet/wallet/WalletTransactionEvent.class
+com/prakhyath/backendmastery/wallet/wallet/WalletRepository.class
