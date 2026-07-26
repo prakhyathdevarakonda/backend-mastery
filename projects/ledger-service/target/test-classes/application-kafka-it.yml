@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    consumer:
+      group-id: ledger-service-kafka-it
+    listener:
+      auto-startup: true
+
+app:
+  kafka:
+    enabled: true

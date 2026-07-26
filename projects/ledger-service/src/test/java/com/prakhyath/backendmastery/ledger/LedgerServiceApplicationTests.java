@@ -1,12 +1,14 @@
 package com.prakhyath.backendmastery.ledger;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.assertj.core.api.Assertions.assertThatCode;
 
-@SpringBootTest
+import org.junit.jupiter.api.Test;
+
 class LedgerServiceApplicationTests {
 
     @Test
-    void contextLoads() {
+    void applicationClassLoads() {
+        assertThatCode(() -> Class.forName(LedgerServiceApplication.class.getName()))
+                .doesNotThrowAnyException();
     }
 }

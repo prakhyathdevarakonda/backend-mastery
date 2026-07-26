@@ -6,6 +6,7 @@
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/Wallet.java
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletController.java
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletEventPublisher.java
+/home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletKafkaConfig.java
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletRepository.java
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletResponse.java
 /home/prakhyathdevarakonda/Documents/prakhyath/backend-mastery/projects/wallet-service/src/main/java/com/prakhyath/backendmastery/wallet/wallet/WalletService.java

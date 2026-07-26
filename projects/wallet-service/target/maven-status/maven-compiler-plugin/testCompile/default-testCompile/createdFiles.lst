@@ -2,3 +2,4 @@ com/prakhyath/backendmastery/wallet/WalletServiceTests.class
 com/prakhyath/backendmastery/wallet/wallet/WalletConcurrencyTest.class
 com/prakhyath/backendmastery/wallet/WalletServiceApplicationTests.class
 com/prakhyath/backendmastery/wallet/WalletControllerTests.class
+com/prakhyath/backendmastery/wallet/wallet/WalletKafkaIntegrationTest.class
