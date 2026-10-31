@@ -277,6 +277,5 @@ Virtual threads help in blocking IO-heavy services, but they do not remove DB po
 
 Go to:
 
-- [`02-big-picture-map.md`](02-big-picture-map.md)
 - [`03-postgresql-mac-and-scenarios.md`](03-postgresql-mac-and-scenarios.md)
 - [`04-spring-security-and-aop.md`](04-spring-security-and-aop.md)

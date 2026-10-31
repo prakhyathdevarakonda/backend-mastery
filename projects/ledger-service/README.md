@@ -152,4 +152,4 @@ See also `../wallet-service/PRACTICE-CHECKPOINTS.md` — Checkpoint 7.
 
 - `../README.md` — multi-service overview, ports, smoke test
 - `../wallet-service/README.md` — API and producer side
-- `../../05-learning-roadmap.md` — Kafka weeks 7–8
+- Study map, Area 9 (Kafka), week 5

@@ -16,18 +16,9 @@ Paths:
 - `projects/ledger-service`
 - `projects/screening-workflow-service`
 
-## Interview Fundamentals Track
+## What to study when
 
-For fundamentals-first interview prep, use:
-
-- `projects/INTERVIEW-READINESS-SPEC.md`
-- `projects/RESUME-DEPTH-TRACK.md`
-- `projects/basic-projects/README.md`
-- `projects/basic-projects/01-url-shortener-fundamentals.md`
-- `projects/basic-projects/02-rate-limiter-service.md`
-- `projects/basic-projects/03-job-queue-worker.md`
-- `projects/basic-projects/04-cache-aside-catalog.md`
-- `projects/basic-projects/05-leaderboard-service.md`
+Follow the study map (`../../Java Full Stack – Study Map & Question Tracker.md`). System design mini-specs live in `basic-projects/`.
 
 ## Kafka Flow (Checkpoint 7)
 
@@ -188,6 +179,5 @@ Integration tests use `@EmbeddedKafka` (in-process broker; no Docker required fo
 
 ## Further reading (repo root)
 
-- `../05-learning-roadmap.md` — Weeks 7–8 Kafka
 - `wallet-service/PRACTICE-CHECKPOINTS.md` — Checkpoint 7 tasks
-- `../02-big-picture-map.md` — system diagram
+- Study map, Area 9 (Kafka), week 5

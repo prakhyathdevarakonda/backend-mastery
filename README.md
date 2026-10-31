@@ -1,48 +1,20 @@
-# Backend Mastery (Java + Spring Boot)
+# Backend Mastery (Java + Spring Boot labs)
 
-This repository is a practical learning path for backend interviews and real production thinking.
+**The plan and tracker live in `../Java Full Stack – Study Map & Question Tracker.md`.** This repo only holds labs and reference notes. Open the study map first; it tells you which file here to use each week.
 
-It starts with the 5 interview problems you got, then expands into the big picture:
+## What's here
 
-- system design
-- API design
-- PostgreSQL indexing and isolation
-- Kafka and event-driven systems
-- observability and incident debugging
-- Spring Security basics
-- Spring AOP concepts
-- CI/CD, performance tuning, and maintainability
+| Path | Use it for | Study map week |
+| --- | --- | --- |
+| `01-five-problems.md` | 5 guided concurrency/Spring problems (hints, then hidden solutions) | 1 |
+| `labs/01, 02, 05` | Runnable Java: race condition, ThreadLocal leak, CompletableFuture starvation | 1, 7 |
+| `labs/03, 04` | Guides only (LazyInit, lost update). Build them inside `wallet-service` | 3 |
+| `projects/wallet-service` | Postgres + JPA, locking, AFTER_COMMIT Kafka publish. `PRACTICE-CHECKPOINTS.md` is the task list | 3–8 |
+| `projects/ledger-service` | Kafka consumer, idempotency | 5 |
+| `projects/screening-workflow-service` | Async workflow with a human decision step (optional, mirrors the Phenom Screening product) | 5, 7 |
+| `projects/basic-projects/` | System design mini-specs | 8+ |
+| `03-postgresql-mac-and-scenarios.md` | Postgres setup + indexing/isolation scenarios | 4 |
+| `04-spring-security-and-aop.md` | Security + AOP notes | 6 |
+| `revision-sheets/` | Pre-interview quick revision | Before interviews |
 
-Everything is written so a fresher can follow it on any machine (including Mac).
-
-## Start Here
-
-1. Read [`00-start-here.md`](00-start-here.md)
-2. Practice the 5 problems in [`01-five-problems.md`](01-five-problems.md)
-3. Understand the bigger map in [`02-big-picture-map.md`](02-big-picture-map.md)
-4. Set up and learn PostgreSQL using [`03-postgresql-mac-and-scenarios.md`](03-postgresql-mac-and-scenarios.md)
-5. Study Spring Security and AOP basics in [`04-spring-security-and-aop.md`](04-spring-security-and-aop.md)
-6. Follow the weekly plan in [`05-learning-roadmap.md`](05-learning-roadmap.md)
-7. Self-check your level in [`06-self-introspection.md`](06-self-introspection.md)
-
-## Project
-
-Hands-on project lives in:
-
-- [`projects/wallet-service`](projects/wallet-service)
-- [`projects/ledger-service`](projects/ledger-service)
-- [`projects/README.md`](projects/README.md)
-
-Use this project to practice the same concepts in running code.
-
-Project checkpoints:
-
-- [`projects/wallet-service/PRACTICE-CHECKPOINTS.md`](projects/wallet-service/PRACTICE-CHECKPOINTS.md)
-
-## Quick Revision Sheets
-
-Use these before interviews:
-
-- [`revision-sheets/01-five-problems-quick-revision.md`](revision-sheets/01-five-problems-quick-revision.md)
-- [`revision-sheets/02-postgresql-quick-revision.md`](revision-sheets/02-postgresql-quick-revision.md)
-- [`revision-sheets/03-spring-security-aop-quick-revision.md`](revision-sheets/03-spring-security-aop-quick-revision.md)
+Run instructions: `projects/README.md`.
