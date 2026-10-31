@@ -8,11 +8,26 @@ Runnable backend services for hands-on learning: PostgreSQL, concurrency, and Ka
 |---------|-------------|----------------|
 | **wallet-service** | 8080 | Wallet API, PostgreSQL persistence, Kafka producer |
 | **ledger-service** | 8081 | Kafka consumer, in-memory idempotency (no DB) |
+| **screening-workflow-service** | 8082 | Resume-style async workflow (request -> AI score -> human decision) |
 
 Paths:
 
 - `projects/wallet-service`
 - `projects/ledger-service`
+- `projects/screening-workflow-service`
+
+## Interview Fundamentals Track
+
+For fundamentals-first interview prep, use:
+
+- `projects/INTERVIEW-READINESS-SPEC.md`
+- `projects/RESUME-DEPTH-TRACK.md`
+- `projects/basic-projects/README.md`
+- `projects/basic-projects/01-url-shortener-fundamentals.md`
+- `projects/basic-projects/02-rate-limiter-service.md`
+- `projects/basic-projects/03-job-queue-worker.md`
+- `projects/basic-projects/04-cache-aside-catalog.md`
+- `projects/basic-projects/05-leaderboard-service.md`
 
 ## Kafka Flow (Checkpoint 7)
 

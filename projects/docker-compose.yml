@@ -70,5 +70,17 @@ services:
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
 
+  screening-workflow-service:
+    build:
+      context: ./screening-workflow-service
+    container_name: backend-mastery-screening-workflow-service
+    depends_on:
+      kafka:
+        condition: service_healthy
+    ports:
+      - "8082:8082"
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+
 volumes:
   backend_mastery_postgres_data:
