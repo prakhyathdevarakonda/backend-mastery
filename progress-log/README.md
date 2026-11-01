@@ -39,3 +39,4 @@ What to do next / open items.
 | --- | --- |
 | 2026-11-01 | [Single plan + doc cleanup](2026-11-01-single-plan-and-cleanup.md) |
 | 2026-11-02 | [Tracker by week + local setup + seed data](2026-11-02-local-setup-and-seed-data.md) |
+| 2026-11-02 | [Shareable setup (Mac, Linux, Windows)](2026-11-02-shareable-setup.md) |

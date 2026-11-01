@@ -24,6 +24,7 @@ Java full-stack interview readiness with **strong fundamentals**, starting from 
 
 - `backend-mastery/projects/README.md`: one guide for wallet (:8080), ledger (no HTTP, Kafka consumer), screening (:8082), Postgres :5432, Kafka :9094, Adminer :8090, Kafka UI :8085. `docker compose up -d` = infra only; `--profile apps` = services in Docker; `--profile tools` = UIs. `./seed.sh` loads sample data.
 - `questionnaire-patterns/README.md`: Mongo :27017, app :8083, mongo-express :8091, `./seed.sh`.
+- New machine: only Git + Docker + jq needed (quick start + per-OS table in `projects/README.md`; Windows via WSL 2).
 - Docker installed. **Maven not installed** (`brew install maven` needed for `mvn spring-boot:run` / `mvn test`); services can run via Docker meanwhile.
 
 ## Conventions / decisions
