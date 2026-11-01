@@ -17,4 +17,4 @@
 | `04-spring-security-and-aop.md` | Security + AOP notes | 6 |
 | `revision-sheets/` | Pre-interview quick revision | Before interviews |
 
-Run instructions: `projects/README.md`.
+Local setup: `projects/README.md`. What was done in each push: `progress-log/` (start a new chat by pasting `progress-log/CONTEXT.md`).

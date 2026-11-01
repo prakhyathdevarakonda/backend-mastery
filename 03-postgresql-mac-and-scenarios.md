@@ -8,14 +8,7 @@ Use any one option.
 
 ### Option A: Docker (recommended)
 
-```bash
-docker compose up -d
-docker compose ps
-```
-
-From this repo:
-
-- `projects/wallet-service/docker-compose.yml`
+From `projects/`: `docker compose up -d postgres`. Full guide: `projects/README.md`.
 
 ### Option B: Homebrew
 

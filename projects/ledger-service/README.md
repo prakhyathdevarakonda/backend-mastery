@@ -14,7 +14,7 @@ Use this with `wallet-service` to practice multi-service, event-driven design.
 
 ```
 wallet-service  ──publish──▶  wallet.transactions  ──consume──▶  ledger-service
-     (8080)                           (Kafka)                        (8081 in Docker)
+     (8080)                           (Kafka)                        (no HTTP port)   
 ```
 
 ## Tech stack
@@ -37,39 +37,9 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 ## Run locally
 
-### With wallet-service on host
+Setup, sample data and how to view the data are in **[`../README.md`](../README.md)** (one guide for all services).
 
-Start Kafka (and Postgres for wallet) from `projects`:
-
-```bash
-cd ../..
-docker compose up -d kafka postgres
-```
-
-Run ledger:
-
-```bash
-mvn spring-boot:run
-```
-
-Default bootstrap: **`localhost:9094`** (`application.yml`).
-
-Run wallet in another terminal, then deposit — watch this service's console for:
-
-```
-Ledger consumed eventId=... walletId=... type=DEPOSIT amount=... balanceAfter=...
-```
-
-### Full Docker stack
-
-From `projects`:
-
-```bash
-docker compose up --build
-docker logs -f backend-mastery-ledger-service
-```
-
-Ledger is mapped to **http://localhost:8081** (actuator only; no business API).
+Ledger has **no HTTP API**. See what it does in its console (`Ledger consumed eventId=...`) or in Kafka UI (consumer group `ledger-service`).
 
 ## Kafka consumer design
 
@@ -152,4 +122,4 @@ See also `../wallet-service/PRACTICE-CHECKPOINTS.md` — Checkpoint 7.
 
 - `../README.md` — multi-service overview, ports, smoke test
 - `../wallet-service/README.md` — API and producer side
-- Study map, Area 9 (Kafka), week 5
+- Study map, Week 5 (Kafka)

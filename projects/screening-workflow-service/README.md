@@ -36,25 +36,9 @@ POST /api/screenings/{id}/decision
 - `screening.results`
 - `screening.decisions`
 
-## Run with host Maven + Docker Kafka
+## Run locally
 
-From `projects`:
-
-```bash
-docker compose up -d kafka
-cd screening-workflow-service
-mvn spring-boot:run
-```
-
-Service runs on `http://localhost:8082`.
-
-## Run full stack in Docker
-
-From `projects`:
-
-```bash
-docker compose up --build screening-workflow-service
-```
+Setup, sample data and how to view the data are in **[`../README.md`](../README.md)** (one guide for all services).
 
 ## API examples
 

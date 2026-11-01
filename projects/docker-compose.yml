@@ -1,3 +1,7 @@
+# Default:             docker compose up -d                        -> postgres + kafka (run the apps with mvn)
+# Apps in Docker too:  docker compose --profile apps up -d --build
+# Web UIs:             docker compose --profile tools up -d        -> Adminer :8090, Kafka UI :8085
+# See README.md in this folder for the full local setup.
 services:
   postgres:
     image: postgres:17-alpine
@@ -42,6 +46,7 @@ services:
       start_period: 20s
 
   wallet-service:
+    profiles: ["apps"]
     build:
       context: ./wallet-service
     container_name: backend-mastery-wallet-service
@@ -59,18 +64,18 @@ services:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
 
   ledger-service:
+    profiles: ["apps"]
     build:
       context: ./ledger-service
     container_name: backend-mastery-ledger-service
     depends_on:
       kafka:
         condition: service_healthy
-    ports:
-      - "8081:8080"
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
 
   screening-workflow-service:
+    profiles: ["apps"]
     build:
       context: ./screening-workflow-service
     container_name: backend-mastery-screening-workflow-service
@@ -81,6 +86,30 @@ services:
       - "8082:8082"
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+
+  # --- Optional web UIs: docker compose --profile tools up -d ---
+  adminer:            # Postgres UI -> http://localhost:8090
+    profiles: ["tools"]
+    image: adminer:4.8.1
+    container_name: backend-mastery-adminer
+    depends_on: [postgres]
+    ports:
+      - "8090:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+
+  kafka-ui:           # Kafka UI -> http://localhost:8085
+    profiles: ["tools"]
+    image: kafbat/kafka-ui:v1.1.0
+    container_name: backend-mastery-kafka-ui
+    depends_on:
+      kafka:
+        condition: service_healthy
+    ports:
+      - "8085:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
 
 volumes:
   backend_mastery_postgres_data:
