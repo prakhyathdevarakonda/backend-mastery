@@ -24,16 +24,34 @@ One guide to run everything on your Mac, load sample data, call the APIs and **s
                  ▲ POST /decision ──▶ screening.decisions ──▶ decision listener ──┘
 ```
 
-## 1. One-time install
+## Quick start on a new machine (only Git + Docker + jq needed)
 
 ```bash
-brew install --cask docker     # Docker Desktop, then open it once so the engine starts (OrbStack also works)
-brew install maven openjdk@21  # Java 21 is what these services target
-export JAVA_HOME=$(/usr/libexec/java_home -v 21)   # add to ~/.zshrc
-docker --version && mvn -v && java -version        # all three should print versions
+git clone https://github.com/prakhyathdevarakonda/backend-mastery.git
+git clone https://github.com/prakhyathdevarakonda/questionnaire-patterns.git
+
+cd backend-mastery/projects
+docker compose up -d                          # Postgres + Kafka
+docker compose --profile apps up -d --build   # wallet, ledger, screening built inside Docker (first time: a few minutes)
+docker compose --profile tools up -d          # optional UIs
+curl -s localhost:8080/actuator/health        # repeat until {"status":"UP"}
+./seed.sh                                     # sample data
+
+cd ../../questionnaire-patterns               # see its README: MongoDB + app on :8083 + ./seed.sh
 ```
 
-`jq` (pretty JSON in the terminal) ships with macOS. Check with `jq --version`.
+Check: http://localhost:8080/api/wallets/1 (Asha's wallet) · http://localhost:8085 (Kafka UI) · http://localhost:8090 (Adminer).
+Ports that must be free: 5432, 9094, 8080, 8082, 8083, 8085, 8090, 8091, 27017.
+
+## 1. One-time install
+
+| | Mac | Linux (Debian/Ubuntu) | Windows |
+| --- | --- | --- | --- |
+| Docker | `brew install --cask docker`, then open Docker Desktop once | Docker Engine + Compose plugin ([docs.docker.com/engine/install](https://docs.docker.com/engine/install/)), then `sudo usermod -aG docker $USER` and log out and back in | Docker Desktop with the WSL 2 backend; run **everything below inside WSL (Ubuntu)** |
+| jq | built in | `sudo apt install jq` | in WSL: `sudo apt install jq` |
+| Java 21 + Maven (optional: only for `mvn spring-boot:run` / `mvn test`) | `brew install openjdk@21 maven`, `export JAVA_HOME=$(/usr/libexec/java_home -v 21)` | `sudo apt install openjdk-21-jdk maven` | in WSL: same as Linux |
+
+Check: `docker --version && jq --version` (plus `java -version && mvn -v` if you installed them).
 
 ## 2. Start infrastructure (Postgres + Kafka)
 
