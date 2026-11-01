@@ -1,6 +1,6 @@
 # 2026-11-02: Tracker by week + local setup + seed data
 
-**Repos / commits:** both repos, commit "Add local setup guide, seed data and progress log" (see `git log`)
+**Repos / commits:** backend-mastery `19d64d2` · questionnaire-patterns `17d918f`
 
 ## Why
 1. The tracker's content was good but the flow was confusing: topics were numbered 1–15 while the weeks visited them in a different order (4, 5 → 1, 6 → 2, 3 …), and lab tasks sat in a separate block at the end.
